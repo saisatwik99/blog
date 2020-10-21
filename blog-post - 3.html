@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Sai Satwik Blog</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog">
+    <meta name="author" content="Sai Satwik">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Sai Satwik</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/saisatwik99.jpeg" alt="image" >			
+					
+					<div class="bio mb-3">Hi, this is Sai Satwik. I'm Web Developer. I design & build user interfaces. I am coder too..<br><a href="http://saisatwik99.github.io/">Find out more about me</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+						
+						<li class="list-inline-item"><a href="https://www.linkedin.com/in/sai-satwik-bb390018b/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com/saisatwik99/?hl=en"><i class="fab fa-instagram fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/saisatwik99/"><i class="fab fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://medium.com/@saisatwik99"><i class="fab fa-medium fa-fw"></i></a></li>
+			            <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-envelope-o fa-fw"></i></a></li> -->
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item">
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+					    <a class="nav-link" href="blog-post - 1.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="http://saisatwik99.github.io/"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					</li>
+				</ul>
+				
+				<div class="my-2 my-md-3">
+					
+				    <a class="btn btn-primary" href="#" target="_blank">Get in Touch</a>
+				    
+				</div>
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">How To Use Local Storage With JavaScript</h2>
+				    <div class="meta mb-3"><span class="date">Published on 19 September 2020</span><span class="time">4 min read</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/1.jpeg" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">Image Credit: <a href="https://made4dev.com?ref=devblog" target="_blank">made4dev.com (Premium Programming T-shirts)</a></figcaption> -->
+					</figure>
+					<p>Local storage is data stored locally in a client’s browser. It is also pure JavaScript.</p>
+					<p>There are two types of storage you can use:</p>
+					<p><li><b>Local storage:</b> Data that persists even if you refresh the page or close the browser.</li></p>
+					<p><li><b>Session storage:</b> Data that will get cleared when the browser is closed.</li></p>
+
+					<h2 class="title mb-2">Why Are Local Storage and Session Storage Useful?</h2>
+					<p>You don’t have to use cookies to store temporary data, which needs to be created by a web server and doesn’t get sent with every HTTP request.</p>
+					<p>So, if you’re building a static website you won’t need any back-end language or logic to store data. Also, your local storage provides 5MB of data storage, while you can only store a maximum of 4KB in a cookie.</p>
+					
+					<p>A few technical things:</p>
+					<p><li>You can set key: value pairs.</li></p>
+					<p><li>You can only store strings.</li></p>
+					<p>You can store arrays and objects, but you have to turn them into strings first, using a method called JSON.stringify() and JSON.parse(). More on this later.</p>
+
+
+					<p>These are the methods for local storage:</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/2.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">Image Credit: <a href="https://made4dev.com?ref=devblog" target="_blank">made4dev.com (Premium Programming T-shirts)</a></figcaption> -->
+					</figure>
+					<p>Setting data into local storage:</p>
+
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/3.png" alt="image"></a>
+				        <figcaption class="mt-2 text-center image-caption">They are saved as key: value pairs.</figcaption>
+					</figure>
+
+					<p>Setting data into session storage:</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/4.png" alt="image"></a>
+				        <figcaption class="mt-2 text-center image-caption">These are also saved as key: value pairs.</figcaption>
+					</figure>
+
+					<p>If you go into your console in your browser (CMD+Option+J) and go into the Application tab you can see your data.</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/5.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">These are also saved as key: value pairs.</figcaption> -->
+					</figure>
+					<p>We can get from storage:</p>
+
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/6.png" alt="image"></a>
+				        <figcaption class="mt-2 text-center image-caption">Used console.log() for an example to show data.</figcaption>
+					</figure>
+
+					<p>We can remove from storage:</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/7.png" alt="image"></a>
+				        <figcaption class="mt-2 text-center image-caption">Used console.log() for an example to show data.</figcaption>
+					</figure>
+
+					<p>We can clear all from storage:</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/8.png" alt="image"></a>
+				        <figcaption class="mt-2 text-center image-caption">The data will become null.</figcaption>
+					</figure>
+
+					<h2 class="title mb-2">Example: Saving a Task</h2>
+					<p>Quick example. If you had a form for, let’s say, a task list, and you wanted to save the task the user submits, you could do something like this:</p>
+					<p>Find your form input:</p>
+
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/9.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">The data will become null.</figcaption> -->
+					</figure>
+					<p>Add event ‘submit’ to form input:</p>
+
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/10.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">The data will become null.</figcaption> -->
+					</figure>
+
+					<p>Grab the form’s input value:</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/11.png" alt="image"></a>
+				        <figcaption class="mt-2 text-center image-caption">I had the input tag attached with an ID of “task” and I used the value method to get the user’s input and store it in a variable.</figcaption>
+					</figure>
+
+					<p>Here is the somewhat tricky part. If we want to store multiple tasks from the user, we need to create an array of tasks and store that as a string.</p>
+					<p>1. First, we need to check to see if there is something in local storage and, if there is, pull it out and add to. And if not, set an empty array.</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/12.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">I had the input tag attached with an ID of “task” and I used the value method to get the user’s input and store it in a variable.</figcaption> -->
+					</figure>
+					<p>2. Now we want to wrap our localStorage.getItem(‘tasks’); in a method called JSON.parse(). Then, we want to pass our task variable into our tasks variable.</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/13.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">I had the input tag attached with an ID of “task” and I used the value method to get the user’s input and store it in a variable.</figcaption> -->
+					</figure>
+
+					<p>3. We will convert tasks back into a string because we can only store strings in our local and session storage.</p>
+
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/14.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">I had the input tag attached with an ID of “task” and I used the value method to get the user’s input and store it in a variable.</figcaption> -->
+					</figure>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/15.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">I had the input tag attached with an ID of “task” and I used the value method to get the user’s input and store it in a variable.</figcaption> -->
+					</figure>
+
+					<p>4. Now, if we want to iterate through it and use a forEach(), we have to parse it back or we’ll get TypeError: forEach is not a function error because tasks is an array — we pulled it out from local storage which only stores strings.</p>
+					<figure class="blog-banner">
+				        <a href="#"><img class="img-fluid" src="assets/images/Blog-3/16.png" alt="image"></a>
+				        <!-- <figcaption class="mt-2 text-center image-caption">I had the input tag attached with an ID of “task” and I used the value method to get the user’s input and store it in a variable.</figcaption> -->
+					</figure>
+					<p>Thanks for reading!</p>
+
+				</div>
+		    </div>
+	    </article>
+	    
+	    
+	    <footer class="footer text-center py-2 theme-bg-dark">
+                <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://saisatwik99.github.io/" target="_blank">Sai Satwik</a></small>
+	    </footer>
+    
+    </div>
+       
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="assets/js/demo/style-switcher.js"></script>     
+    
+
+</body>
+</html> 
+
